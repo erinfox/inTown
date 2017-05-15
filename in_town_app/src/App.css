@@ -1,15 +1,33 @@
 .App {
   text-align: center;
+
 }
 
-
+.CheckBox {
+  float:left;
+}
 
 ul {
   list-style: none
 }
+
+.Map {
+  float: right;
+  height: 300px;
+  width: 100%;
+}
+
+.MapContainer {
+  float:right;
+  height: 300px;
+  width: 100%;
+}
+
+
 
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+

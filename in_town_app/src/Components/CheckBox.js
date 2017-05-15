@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import './App.css';
-
 
 class CheckBox extends Component {
   constructor() {
