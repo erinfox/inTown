@@ -1,33 +1,69 @@
 .App {
-  text-align: center;
+
 
 }
 
+
+.inTown {
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 80px;
+  margin-bottom: 40px;
+
+
+}
+
+/*taxi*/
+/*.lightSpeedIn.animate {
+  height:80px;
+  width: auto;
+
+}*/
+
+.taxiSize {
+  height: 60px;
+  width: auto;
+  margin-left: 10px;
+}
+
+
+/*.boxAndGoogleMap {
+  display: flex;
+  justify-content: center;
+
+}*/
+
 .CheckBox {
   float:left;
+  padding-left: 10%;
+
+}
+
+h3{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 ul {
   list-style: none
 }
 
-.Map {
-  float: right;
-  height: 300px;
-  width: 100%;
+.GoogleMaps {
+  float:left;
+  padding-left: 4%;
 }
 
-.MapContainer {
-  float:right;
-  height: 300px;
-  width: 100%;
+.btn {
+
 }
 
-
-
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+input {
+  float:left;
 }
 
+/*@keyframes lightSpeedIn {
+  from {
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+*/

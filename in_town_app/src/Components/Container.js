@@ -7,7 +7,7 @@ class Container extends Component {
       width: '50vw',
       height: '50vh'
     }
-    return  <Map style={style} google={this.props.google} zoom={14} />;
+    return  <Map style={style}  google={this.props.google} zoom={14} />;
   }
 }
 

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "animate.css": "^3.5.2",
     "dotenv": "^4.0.0",
     "dotenv-webpack": "^1.4.5",
     "google-maps-react": "^1.0.19",

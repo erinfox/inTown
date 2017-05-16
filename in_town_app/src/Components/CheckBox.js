@@ -139,8 +139,8 @@ class CheckBox extends Component {
           </div>
           <div>
             <form onSubmit={ this.handleSubmit }>
-              <input type="text" value={this.state.new_place} onChange={this.handleChange}/>
-              <button type="submit">Add more?</button>
+             {/* <input type="text" value={this.state.new_place} onChange={this.handleChange}/>}*/}
+              {/*<button type="submit">Submit!</button>*/}
              </form>
           </div>
         </div>
