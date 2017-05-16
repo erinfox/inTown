@@ -3,67 +3,48 @@
 
 }
 
-
 .inTown {
   text-align: center;
   font-family: 'Lobster', cursive;
   font-size: 80px;
   margin-bottom: 40px;
-
-
 }
-
-/*taxi*/
-/*.lightSpeedIn.animate {
-  height:80px;
-  width: auto;
-
-}*/
 
 .taxiSize {
   height: 60px;
   width: auto;
   margin-left: 10px;
 }
-
-
-/*.boxAndGoogleMap {
-  display: flex;
-  justify-content: center;
-
-}*/
+ul {
+  list-style: none
+}
 
 .CheckBox {
-  float:left;
+  /*float:left;*/
+  display: inline-block;
+
   padding-left: 10%;
+}
+
+input {
+  display: inline-block;
+}
+.myli{
+  display: inline-block;
 
 }
+
 
 h3{
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
 
-ul {
-  list-style: none
-}
 
 .GoogleMaps {
-  float:left;
+  display: inline-block;
   padding-left: 4%;
 }
 
-.btn {
 
-}
 
-input {
-  float:left;
-}
-
-/*@keyframes lightSpeedIn {
-  from {
-    transform: translate3d(100%, 0, 0) skewX(-30deg);
-    opacity: 0;
-  }
-*/
