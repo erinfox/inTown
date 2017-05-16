@@ -89,7 +89,7 @@ class CheckBox extends Component {
     return individualPlace.map( (place, index) => {
       return(
         <div key={index}>
-        <input type="checkbox" checked={place.checked} onChange={ () => this.updateCheckedBox(index)} />
+         <input type="checkbox" checked={place.checked} onChange={ () => this.updateCheckedBox(index)} />
          <li className='myli' style={{color: place.checked? "gray" : "black"}}> {place.place} </li>
          </div>
         )

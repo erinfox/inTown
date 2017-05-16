@@ -8,6 +8,7 @@
   font-family: 'Lobster', cursive;
   font-size: 80px;
   margin-bottom: 40px;
+  margin-top: 10px;
 }
 
 .taxiSize {
@@ -15,36 +16,43 @@
   width: auto;
   margin-left: 10px;
 }
-ul {
-  list-style: none
-}
 
-.CheckBox {
-  /*float:left;*/
+.GoogleMaps {
   display: inline-block;
-
-  padding-left: 10%;
+  padding-left: 2%;
+  padding-top: 7%;
 }
 
-input {
-  display: inline-block;
+.boxAndGoogleMap{
+display: flex;
+justify-content: flex-start;
 }
-.myli{
-  display: inline-block;
-
-}
-
 
 h3{
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
 
-
-.GoogleMaps {
-  display: inline-block;
-  padding-left: 4%;
+ul {
+  list-style: none
 }
+
+.CheckBox {
+  display: inline-block;
+  padding-left: 10%;
+}
+
+input {
+  display: inline-block;
+}
+
+.myli{
+  display: inline-block;
+}
+
+
+
+
 
 
 
