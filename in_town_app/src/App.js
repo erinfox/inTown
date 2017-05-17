@@ -4,7 +4,7 @@ import './App.css';
 import GoogleMaps from './Components/Container';
 import CheckBox from './Components/CheckBox';
 import './animate.css';
-import Markers from './Components/Markers';
+// import Markers from './Components/Markers';
 
 
 class App extends Component {

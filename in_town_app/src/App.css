@@ -3,6 +3,12 @@
 
 }
 
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .inTown {
   text-align: center;
   font-family: 'Lobster', cursive;
