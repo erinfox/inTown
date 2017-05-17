@@ -10,17 +10,23 @@ class Container extends Component {
   onReady(mapProps, map){
     //when map is ready and loaded
   }
+
+
   renderMarkers(){
+
     return this.props.places.map( (place, index) => {
       return (
           <Marker
             key={index}
             name={place.place}
             position={{ lat: place.lat, lng:place.lng }} />
+
         )
     })
   };
   render() {
+    // console.log("map")
+    console.log(this.state)
     const style = {
       width: '55vw',
       height: '55vh'

@@ -6,7 +6,7 @@ class CheckBox extends Component {
     this.state = {
       // fetching: true,
       places: [],
-      new_place: ''
+      // new_place: ''
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -86,24 +86,38 @@ class CheckBox extends Component {
       return(
         <div key={index}>
          <input type="checkbox" checked={place.checked} onChange={ () => this.updateCheckedBox(index)} />
-         <li className='myli' style={{color: place.checked? "light gray" : "black"}}> {place.place} </li>
+         {/*<input type='checkbox' checked={place.checked} value={place.place} onChange={ (e)=>this.updateCheckedBox(e)} />*/}
+         <li className='myli' style={{color: place.checked? "gray" : "black"}}> {place.place} </li>
          </div>
         )
     });
   };
 
+filterByName(jsonObject){
+            return jsonObject.filter(function(jsonObject) {
+                return (jsonObject['checked'] === true);});
+        }
+
+
 
   updateCheckedBox(x){
     let allPlaces = this.state.places;
     let selectedPlace = allPlaces[x];
+    console.log(this.state)
     if (selectedPlace.checked === false) {
       selectedPlace.checked = true
+      this.props.addToPlaces(x)
+      console.log('box is checked')
     } else {
       selectedPlace.checked = false
     };
     allPlaces[x] = selectedPlace;
+
+    let checkedPlaces = this.filterByName(allPlaces)
+
+
     this.setState({
-      places: allPlaces
+      checkedPlaces: checkedPlaces
     });
     };
 
@@ -115,7 +129,7 @@ class CheckBox extends Component {
 
     handleSubmit(event){
       const newPlace = this.state.new_place;
-      const currentPlaces = this.state.tasks;
+      const currentPlaces = this.state.places;
       currentPlaces.push({place: newPlace, checked: false});
       this.setState({
         places: currentPlaces,
@@ -134,15 +148,15 @@ class CheckBox extends Component {
             </ul>
           </div>
           <div>
-            <form onSubmit={ this.handleSubmit }>
-             {/* <input type="text" value={this.state.new_place} onChange={this.handleChange}/>}*/}
-              {/*<button type="submit">Submit!</button>*/}
-             </form>
+            {/* <form onSubmit={ this.handleSubmit }>
+             <input type="text" value={this.state.new_place} onChange={this.handleChange}/>}
+              {/*<button type="submit">Submit!</button>
+             </form>*/}
           </div>
         </div>
       );
     }
- }
+}
 
 
 export default CheckBox;
