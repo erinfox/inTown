@@ -87,16 +87,16 @@ class CheckBox extends Component {
         <div key={index}>
          <input type="checkbox" checked={place.checked} onChange={ () => this.updateCheckedBox(index)} />
          {/*<input type='checkbox' checked={place.checked} value={place.place} onChange={ (e)=>this.updateCheckedBox(e)} />*/}
-         <li className='myli' style={{color: place.checked? "gray" : "black"}}> {place.place} </li>
+         <li className='myli' style={{color: place.checked? "black" : "gray"}}> {place.place} </li>
          </div>
         )
     });
   };
 
-filterByName(jsonObject){
-            return jsonObject.filter(function(jsonObject) {
-                return (jsonObject['checked'] === true);});
-        }
+      filterByName(jsonObject){
+                  return jsonObject.filter(function(jsonObject) {
+                      return (jsonObject['checked'] === true);});
+      }
 
 
 
@@ -106,7 +106,7 @@ filterByName(jsonObject){
     console.log(this.state)
     if (selectedPlace.checked === false) {
       selectedPlace.checked = true
-      this.props.addToPlaces(x)
+      // this.props.addToPlaces(x)
       console.log('box is checked')
     } else {
       selectedPlace.checked = false
@@ -114,7 +114,6 @@ filterByName(jsonObject){
     allPlaces[x] = selectedPlace;
 
     let checkedPlaces = this.filterByName(allPlaces)
-
 
     this.setState({
       checkedPlaces: checkedPlaces

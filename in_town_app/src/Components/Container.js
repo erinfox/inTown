@@ -19,14 +19,14 @@ class Container extends Component {
           <Marker
             key={index}
             name={place.place}
-            position={{ lat: place.lat, lng:place.lng }} />
+            position={{ lat: place.lat, lng: place.lng }} />
 
         )
     })
   };
   render() {
     // console.log("map")
-    console.log(this.state)
+    // console.log(this.state)
     const style = {
       width: '55vw',
       height: '55vh'
