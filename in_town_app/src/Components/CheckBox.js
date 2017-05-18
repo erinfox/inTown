@@ -92,15 +92,14 @@ class CheckBox extends Component {
         )
     });
   };
-
-      filterByName(jsonObject){
-                  return jsonObject.filter(function(jsonObject) {
-                      return (jsonObject['checked'] === true);});
-      }
-
-
-
+  filterByName(jsonObject){
+    return jsonObject.filter(function(jsonObject) {
+        return (jsonObject['checked'] === true);});
+  }
   updateCheckedBox(x){
+    // Rewrite this so that it checks if the place is already checked:
+    // If it is, it calls remove
+    // If it's not, it calls add
     let allPlaces = this.state.places;
     let selectedPlace = allPlaces[x];
     console.log(this.state)
@@ -112,20 +111,15 @@ class CheckBox extends Component {
       selectedPlace.checked = false
     };
     allPlaces[x] = selectedPlace;
+    let verified_places = this.filterByName(allPlaces)
+    this.props.addPlace(verified_places);
+  };
 
-    let checkedPlaces = this.filterByName(allPlaces)
-
+  handleChange(event){
     this.setState({
-      checkedPlaces: checkedPlaces
+      new_place: event.target.value
     });
-    };
-
-    handleChange(event){
-      this.setState({
-        new_place: event.target.value
-      });
-    };
-
+  };
     handleSubmit(event){
       const newPlace = this.state.new_place;
       const currentPlaces = this.state.places;
@@ -136,7 +130,6 @@ class CheckBox extends Component {
       });
       event.preventDefault();
     };
-
     render() {
       return (
         <div className="CheckBox">
