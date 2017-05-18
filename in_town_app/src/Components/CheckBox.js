@@ -130,6 +130,11 @@ class CheckBox extends Component {
       });
       event.preventDefault();
     };
+
+
+
+
+
     render() {
       return (
         <div className="CheckBox">

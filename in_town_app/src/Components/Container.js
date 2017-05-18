@@ -33,9 +33,11 @@ class Container extends Component {
       onReady={this.onReady.bind(this)}
       google={this.props.google}
       mapCenter={{lat: 40.748817, lng: -73.985428}}
+
       >
       { this.renderMarkers() }
     </Map>
+
     )
   }
 }

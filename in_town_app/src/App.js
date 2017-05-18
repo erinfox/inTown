@@ -1,4 +1,6 @@
 require('dotenv').config()
+// var Mailto = require('react-mailto');
+import Mailto from 'react-mailto'
 import React, { Component } from 'react';
 import './App.css';
 import GoogleMaps from './Components/Container';
@@ -12,8 +14,7 @@ class App extends Component {
     this.state = {
       checkedPlaces: [],
       places: [
-        {place:"Columbus Circle", lat: 40.711484, lng: -74.012725},
-        {place: "Barclays Center", lat: 40.682495, lng: -73.975035}
+        // {place:"Columbus Circle", lat: 40.711484, lng: -74.012725},
       ]
     };
   }
@@ -37,7 +38,23 @@ class App extends Component {
   removePlace(place){
     // similar except remove the place
     // don't forget to pass this function to checkbox as props
+
+
+    // this.setState({
+    //   if this.addPlace = unchecked {
+    //     this.unchecked =
+    //   }
+    //   places: this.state.places.remove()
+    // })
   }
+
+    renderMessage() {
+      const places = JSON.stringify(this.state.places);
+        return places
+      // to stringify on the array of checked places
+      // return this.sate.places.stringify
+    }
+
   render() {
     console.log(this.state)
     return (
@@ -48,8 +65,11 @@ class App extends Component {
         {/*<div className="CheckBox"><CheckBox addToPlaces={this.addToPlaces} /></div>*/}
           <div className="GoogleMaps"><GoogleMaps places={this.state.places} state={this.state.checkedPlaces}/></div>
           <renderMarkers />
-        </div>
+            <Mailto email="erinkayfox@gmail.com" headers={{body: this.renderMessage()}} obfuscate={true}>
+              Email Me
+        </Mailto>
       </div>
+        </div>
 
     );
   }
