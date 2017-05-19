@@ -51,8 +51,6 @@ class App extends Component {
     renderMessage() {
       const places = JSON.stringify(this.state.places);
         return places
-      // to stringify on the array of checked places
-      // return this.sate.places.stringify
     }
 
   render() {
@@ -63,12 +61,15 @@ class App extends Component {
         <div className="boxAndGoogleMap">
           <div className="CheckBox"><CheckBox addPlace={this.addPlace.bind(this)} /></div>
         {/*<div className="CheckBox"><CheckBox addToPlaces={this.addToPlaces} /></div>*/}
-          <div className="GoogleMaps"><GoogleMaps places={this.state.places} state={this.state.checkedPlaces}/></div>
+          <div className="GoogleMaps"><GoogleMaps places={this.state.places} state={this.state.checkedPlaces}/>
+          </div>
           <renderMarkers />
-            <Mailto email="erinkayfox@gmail.com" headers={{body: this.renderMessage()}} obfuscate={true}>
-              Email Me
-        </Mailto>
+
       </div>
+       <button> <Mailto className="emailMe" email="erinkayfox@gmail.com" headers={{body: this.renderMessage()}} obfuscate={true}>
+              Email Me
+            </Mailto>
+            </button>
         </div>
 
     );
