@@ -1,7 +1,7 @@
 
 # inTown! 
 ## General Assembly WDI Final Project
-![React App](http://imgur.com/a/JNEnj)
+![React App](http://i.imgur.com/3FZy9EZ.png)
 
 Most of the time, out-of-towners have no idea what they want to do while visiting New York City. inTown is here to solve just that. inTown is a web app used for New Yorkers who will be having visitors and need to plan out the trip with places to see and things todo. 
 
